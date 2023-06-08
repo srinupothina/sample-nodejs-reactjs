@@ -5,7 +5,7 @@
   tasks:
     - name: Copy build folder
       copy:
-        src: /opt/jenkins/workspace/VisOps/t057/sample-react.js/deploy-on-nginx/build
+        src: /opt/jenkins/workspace/VisOps/t059/sample-nodejs-reactjs-xxxx-app/deploy-react.js-on-nginx-/build
         dest: /home/ubuntu
 
     - name: Set permissions for /home/ubuntu/build
