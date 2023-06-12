@@ -15,7 +15,7 @@ pipeline {
         stage('prepare') {
             steps {
                 sh 'ansible-vault decrypt --vault-id /opt/vault_id ec2-1.pem'
-                sh "chmod 400 demokey.pem"
+                sh "chmod 400 ec2-1.pem"
                 sh "chmod +x deploy_script.sh"
                 sh "./deploy_script.sh docker-prepare"
             }
