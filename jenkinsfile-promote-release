@@ -20,8 +20,8 @@ pipeline {
                         sshagent(['t059-ssh-key']) {
                             sh """
                                 ssh -o StrictHostKeyChecking=no ${remoteUser}@${remoteServer} 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD &&
-                                docker tag ${remoteDockerImage}:v02 ${imageName} &&
-                                docker tag ${remoteDockerImage}:v02 ${latestImageName} &&
+                                docker tag ${remoteDockerImage}:v01 ${imageName} &&
+                                docker tag ${remoteDockerImage}:v01 ${latestImageName} &&
                                 docker push ${imageName} &&
                                 docker push ${latestImageName} &&
                                 docker logout'
